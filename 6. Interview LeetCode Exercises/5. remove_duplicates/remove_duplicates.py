@@ -31,6 +31,26 @@ class LinkedList:
                 temp = temp.next
             print(" -> ".join(values))
 
+    def remove_duplicates(self):
+        if self.head == None:
+            return None
+        else: 
+            unique_values = set()
+            prev = self.head
+            current_node = prev.next
+            unique_values.add(self.head.value)
+
+            while current_node:
+                if current_node.value not in unique_values:
+                    unique_values.add(current_node.value)
+                    prev = prev.next
+                else:
+                    prev.next = current_node.next
+                    self.length-=1
+                current_node = current_node.next
+
+
+
     #   +===================================================+
     #   |                  WRITE YOUR CODE HERE             |
     #   | Description:                                      |
@@ -50,18 +70,7 @@ class LinkedList:
     #   | - The 'values' set holds unique items seen so far.|
     #   +===================================================+
 
-            
-            
 
-
-#  +=====================================================+
-#  |                                                     |
-#  |          THE TEST CODE BELOW WILL PRINT             |
-#  |              OUTPUT TO "USER LOGS"                  |
-#  |                                                     |
-#  |  Use the output to test and troubleshoot your code  |
-#  |                                                     |
-#  +=====================================================+
 
 
 def test_remove_duplicates(linked_list, expected_values):
