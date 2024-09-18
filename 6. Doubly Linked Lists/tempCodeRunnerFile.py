@@ -1,1 +1,0 @@
-    self.tail.next = new_node

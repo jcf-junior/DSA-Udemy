@@ -73,7 +73,6 @@ class DoublyLinkedList:
             self.length-=1
             return removed_node
 
-
 my_doubly_linked_list = DoublyLinkedList(2)
 my_doubly_linked_list.append(1)
 
