@@ -40,7 +40,6 @@ class LinkedList:
             first_reversed_node = None
             node_before_reversal = None
             prev_node = None
-            
 
             while current is not None:
                 next_node = current.next
@@ -60,7 +59,7 @@ class LinkedList:
                         self.head = current
 
                     first_reversed_node.next = next_node  # Conecta o primeiro nó da secção ao nó após a inversão
-                    
+                   
                 idx += 1
                 current = next_node  # Atualiza o current para o próximo nó (já guardado)
                 
