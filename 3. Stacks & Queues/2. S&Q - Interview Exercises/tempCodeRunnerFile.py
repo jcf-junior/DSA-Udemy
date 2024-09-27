@@ -1,0 +1,1 @@
+        removed = self.stack1.pop()
