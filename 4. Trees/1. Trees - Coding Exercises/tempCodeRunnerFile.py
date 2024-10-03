@@ -1,0 +1,7 @@
+print("\n----- Test: Insert to Empty Tree -----\n")
+bst = BinarySearchTree()
+result = bst.insert(5)
+check(True, result, "Insert 5, should succeed:")
+check(5, bst.root.value, "Root value after inserting 5:")
+check(None, bst.root.left, "Root's left child after inserting 5:")
+check(None, bst.root.right, "Root's right child after inserting 5:")
